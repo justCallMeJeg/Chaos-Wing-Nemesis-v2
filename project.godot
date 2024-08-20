@@ -1,0 +1,66 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Chaos Wing: Nemesis v2"
+config/version="ALPHA v1"
+run/main_scene="res://src/Scenes/GameStates/MainMenu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://src/Scripts/Util/GameManager.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/mode=3
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/Geger John Paul/Documents/Game Development/Chaos Wing Nemesis v2/GameFootage.avi"
+
+[layer_names]
+
+2d_render/layer_1="BG"
+2d_render/layer_2="Game"
+2d_render/layer_3="UI"
+2d_physics/layer_1="Border"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Item"
+
+[navigation]
+
+baking/layer_3=""
+baking/layer_2=""
+baking/layer_1=""
+baking/canvas_textures/default_texture_filter=1
+baking/enable_file_logging=false
+baking/default_gravity=980.0
+baking/run_on_separate_thread=false
+baking/movie_file=""
+baking/size/resizable=true
+baking/size/mode=0
+baking/size/viewport_height=648
+
+[physics]
+
+2d/run_on_separate_thread=true
+2d/default_gravity=0.0
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

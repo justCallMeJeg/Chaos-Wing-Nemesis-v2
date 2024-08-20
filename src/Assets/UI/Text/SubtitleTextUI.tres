@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://gfs0ykv67qu0"]
+
+[ext_resource type="FontFile" uid="uid://cqb5dwh0v5xxr" path="res://src/Assets/UI/PublicPixel (MainFont).ttf" id="1_suvac"]
+
+[resource]
+line_spacing = 0.0
+font = ExtResource("1_suvac")
+font_size = 24
+shadow_size = 0
+shadow_offset = Vector2(0, 0)

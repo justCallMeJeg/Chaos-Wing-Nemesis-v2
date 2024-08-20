@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://6pemyhf0vkwa"]
+
+[ext_resource type="Script" path="res://src/Scripts/Scenes/GameSideSelection.gd" id="1_gpyxt"]
+[ext_resource type="PackedScene" uid="uid://bynfg43xmrc4b" path="res://src/Scenes/UI/SelectionScene/SideBorderUI.tscn" id="2_s7a6l"]
+[ext_resource type="PackedScene" uid="uid://cfp6585xx6raj" path="res://src/Scenes/UI/SelectionScene/SideTooltipUI.tscn" id="3_6qlx6"]
+[ext_resource type="PackedScene" uid="uid://bssxlii1nubs6" path="res://src/Scenes/UI/SelectionScene/MainTextUI.tscn" id="4_uf86g"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_agrhu"]
+
+[node name="GameSideSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gpyxt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.156863, 0.156863, 0.168627, 1)
+
+[node name="SideBorderUI" parent="." instance=ExtResource("2_s7a6l")]
+layout_mode = 1
+
+[node name="SideTooltipUi" parent="." instance=ExtResource("3_6qlx6")]
+layout_mode = 1
+
+[node name="MainTextUi" parent="." instance=ExtResource("4_uf86g")]
+layout_mode = 1
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_agrhu")
+}
