@@ -1,11 +1,96 @@
-[gd_scene load_steps=6 format=3 uid="uid://6pemyhf0vkwa"]
+[gd_scene load_steps=9 format=3 uid="uid://6pemyhf0vkwa"]
 
 [ext_resource type="Script" path="res://src/Scripts/Scenes/GameSideSelection.gd" id="1_gpyxt"]
+[ext_resource type="PackedScene" uid="uid://t0plcqtux4aj" path="res://src/Scenes/UI/SelectionScene/TextTextureUI.tscn" id="2_nknl6"]
 [ext_resource type="PackedScene" uid="uid://bynfg43xmrc4b" path="res://src/Scenes/UI/SelectionScene/SideBorderUI.tscn" id="2_s7a6l"]
 [ext_resource type="PackedScene" uid="uid://cfp6585xx6raj" path="res://src/Scenes/UI/SelectionScene/SideTooltipUI.tscn" id="3_6qlx6"]
 [ext_resource type="PackedScene" uid="uid://bssxlii1nubs6" path="res://src/Scenes/UI/SelectionScene/MainTextUI.tscn" id="4_uf86g"]
+[ext_resource type="PackedScene" uid="uid://b4uisuwbwqn77" path="res://src/Scenes/UI/SelectionScene/SideSelectionIndicatorUI.tscn" id="6_c7l2y"]
+
+[sub_resource type="Animation" id="Animation_dqcbs"]
+resource_name = "IntroAnim"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainTextUi")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"playIntroAnim"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SideBorderUI")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"playIntroAnim"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SideTooltipUi")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"playIntroAnim"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextTextureUI")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"playIntroAnim"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SideSelectionIndicatorUI")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8, 1.33333, 1.43333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"playIntroAnim"
+}, {
+"args": [0],
+"method": &"playErrorAnim"
+}, {
+"args": [1],
+"method": &"playErrorAnim"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_agrhu"]
+_data = {
+"IntroAnim": SubResource("Animation_dqcbs")
+}
 
 [node name="GameSideSelection" type="Control"]
 layout_mode = 3
@@ -25,6 +110,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.156863, 0.156863, 0.168627, 1)
 
+[node name="TextTextureUI" parent="." instance=ExtResource("2_nknl6")]
+layout_mode = 1
+
 [node name="SideBorderUI" parent="." instance=ExtResource("2_s7a6l")]
 layout_mode = 1
 
@@ -32,6 +120,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="MainTextUi" parent="." instance=ExtResource("4_uf86g")]
+layout_mode = 1
+
+[node name="SideSelectionIndicatorUI" parent="." instance=ExtResource("6_c7l2y")]
 layout_mode = 1
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="."]
