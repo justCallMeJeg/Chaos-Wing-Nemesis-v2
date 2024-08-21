@@ -27,7 +27,7 @@ window/size/viewport_width=720
 window/size/viewport_height=1280
 window/size/mode=3
 window/size/resizable=false
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [editor]
 
