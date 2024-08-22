@@ -112,7 +112,7 @@ _data = {
 "RESET": SubResource("Animation_y6vax")
 }
 
-[node name="SideTooltipUi" type="Control"]
+[node name="SideTooltipUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
