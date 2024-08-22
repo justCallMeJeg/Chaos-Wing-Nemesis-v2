@@ -1,9 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://t0plcqtux4aj"]
+[gd_scene load_steps=21 format=3 uid="uid://t0plcqtux4aj"]
 
 [ext_resource type="Script" path="res://src/Scripts/Scenes/UI/TextTextureUI.gd" id="1_c7a4w"]
 [ext_resource type="FontFile" uid="uid://cqb5dwh0v5xxr" path="res://src/Assets/UI/PublicPixel (MainFont).ttf" id="1_dqnbq"]
-[ext_resource type="Texture2D" uid="uid://cgk5ve64jkblo" path="res://SelectionScene1.tres" id="3_4h0ws"]
-[ext_resource type="Texture2D" uid="uid://b3psgin3tpby1" path="res://SelectionScene.tres" id="4_d7rid"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jpn5w"]
 line_spacing = 0.0
@@ -39,6 +37,27 @@ font_size = 64
 font_color = Color(0, 0, 0, 1)
 shadow_size = 0
 shadow_offset = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_yv1a2"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0p6ay"]
+gradient = SubResource("Gradient_yv1a2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_j4gjs"]
+colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_04j2s"]
+gradient = SubResource("Gradient_j4gjs")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 1)
+metadata/_snap_enabled = true
 
 [sub_resource type="LabelSettings" id="LabelSettings_3qrgf"]
 line_spacing = 0.0
@@ -78,7 +97,7 @@ tracks/0/path = NodePath("CenterTextContainer/MiddleText:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(2.98023e-08, 0.1, 0.566667),
+"times": PackedFloat32Array(2.98023e-08, 0.233333, 0.566667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.588235)]
@@ -344,6 +363,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -256.0
+offset_bottom = -256.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_ogfbg")
@@ -384,7 +405,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_4h0ws")
+texture = SubResource("GradientTexture2D_0p6ay")
 
 [node name="ShineGradient" type="TextureRect" parent="CenterTextContainer/MiddleText"]
 layout_mode = 1
@@ -393,7 +414,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_d7rid")
+texture = SubResource("GradientTexture2D_04j2s")
 
 [node name="LowerTextContainer" type="HBoxContainer" parent="."]
 visible = false
@@ -436,6 +457,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 256.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_x3vef")
