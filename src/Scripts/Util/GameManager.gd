@@ -1,18 +1,12 @@
 extends Node
 
 enum GameStates { Idle, MainMenu, SideSelection, ShipSelection, SceneSection }
+enum PlayableSides { DEFAULT = -1, TOP, BOTTOM }
 
-var currentGameState = GameStates.MainMenu
+var currentGameState: GameStates = GameStates.MainMenu
+
+var currentP1Side: PlayableSides = PlayableSides.DEFAULT
+var currentP2Side: PlayableSides = PlayableSides.DEFAULT
 
 func _ready():
 	print("[DEBUG] GameManager ready...")
-
-# GameState Functions ------------------------------
-func getGameSates() -> GameStates:
-	return GameStates
-
-func getCurrentGameState() -> GameStates:
-	return currentGameState
-
-func setGameState(state: GameStates) -> void:
-	currentGameState = state
