@@ -1,7 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfp6585xx6raj"]
+[gd_scene load_steps=8 format=3 uid="uid://cfp6585xx6raj"]
 
 [ext_resource type="Script" path="res://src/Scripts/Scenes/UI/SideTooltipUI.gd" id="1_rb8mo"]
-[ext_resource type="LabelSettings" uid="uid://b7nclytbp8kvw" path="res://src/Assets/UI/Text/SideTooltipUI.tres" id="2_nq7gy"]
+[ext_resource type="FontFile" uid="uid://cqb5dwh0v5xxr" path="res://src/Assets/UI/PublicPixel (MainFont).ttf" id="2_y604w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a3awy"]
+line_spacing = 8.0
+font = ExtResource("2_y604w")
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_73vjt"]
+line_spacing = 8.0
+font = ExtResource("2_y604w")
+font_size = 14
 
 [sub_resource type="Animation" id="Animation_cmgys"]
 resource_name = "IntroAnim"
@@ -137,9 +147,10 @@ theme_override_constants/margin_bottom = 20
 visible = false
 layout_mode = 2
 text = "THIS IS A PLACEHOLDER"
-label_settings = ExtResource("2_nq7gy")
+label_settings = SubResource("LabelSettings_a3awy")
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="BottomTooltipContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -161,9 +172,10 @@ theme_override_constants/margin_bottom = 20
 visible = false
 layout_mode = 2
 text = "THIS IS A PLACEHOLDER"
-label_settings = ExtResource("2_nq7gy")
+label_settings = SubResource("LabelSettings_73vjt")
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="."]
 libraries = {
