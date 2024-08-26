@@ -1,10 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://bynfg43xmrc4b"]
+[gd_scene load_steps=29 format=3 uid="uid://bynfg43xmrc4b"]
 
 [ext_resource type="Script" path="res://src/Scripts/Scenes/UI/SideBorderUI.gd" id="1_2mefq"]
-[ext_resource type="StyleBox" uid="uid://cope74gtkx7e7" path="res://src/Assets/UI/Texture/BGShineTexture.tres" id="1_jgro3"]
 [ext_resource type="LabelSettings" uid="uid://cmnh1qkt1nrwm" path="res://src/Assets/UI/Text/SelectionSceneBorderText.tres" id="2_43x30"]
-[ext_resource type="Texture2D" uid="uid://dol0pnrd84jjj" path="res://src/Assets/UI/Texture/P1TextGradient.tres" id="3_mektc"]
-[ext_resource type="Texture2D" uid="uid://blq5fskg0vctx" path="res://src/Assets/UI/Texture/BorderShineTexture.png" id="5_hs0dm"]
 
 [sub_resource type="Gradient" id="Gradient_wimpg"]
 offsets = PackedFloat32Array(0)
@@ -33,162 +30,23 @@ fill_from = Vector2(0.5, 0)
 fill_to = Vector2(0.5, 1)
 metadata/_snap_enabled = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hl4f"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iful7"]
 bg_color = Color(0.156863, 0.156863, 0.168627, 1)
 
-[sub_resource type="Animation" id="Animation_nmj8f"]
-resource_name = "IntroAnim"
-length = 0.533337
-step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.233333),
-"transitions": PackedFloat32Array(1.5, 1),
-"update": 0,
-"values": [Vector2(-85, 1280), Vector2(0, 1280)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Texture:self_modulate")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.133333, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Partcles/LeftBorderParticles:emitting")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Partcles/LeftBorderParticles:one_shot")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ouges"]
+load_path = "res://.godot/imported/BorderShineTexture.png-f3b8d8955a92eaeaa0cfa3ca39393d65.ctex"
 
-[sub_resource type="Animation" id="Animation_k8tv4"]
-resource_name = "PlayerReadyState"
-length = 0.233337
-step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:theme_override_styles/panel:bg_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.121569, 0.317647, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Texture:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.233333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.196078)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Texture/Container/Margin/Text/Gradient:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Partcles/LeftBorderParticles:one_shot")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Partcles/LeftBorderParticles:emitting")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Partcles/LeftBorderParticles:explosiveness")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w1xaf"]
+texture = SubResource("CompressedTexture2D_ouges")
+
+[sub_resource type="Gradient" id="Gradient_85fj3"]
+colors = PackedColorArray(0.121569, 0.317647, 1, 1, 0.156863, 0.156863, 0.168627, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6cqrd"]
+gradient = SubResource("Gradient_85fj3")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+metadata/_snap_enabled = true
 
 [sub_resource type="Animation" id="Animation_cbq4q"]
 length = 0.001
@@ -289,30 +147,8 @@ tracks/7/keys = {
 "values": [Vector2(-85, 1280)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_vscd2"]
-_data = {
-"IntroAnim": SubResource("Animation_nmj8f"),
-"PlayerReadyState": SubResource("Animation_k8tv4"),
-"RESET": SubResource("Animation_cbq4q")
-}
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4gc5"]
-bg_color = Color(0.156863, 0.156863, 0.168627, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t6jaq"]
-texture = ExtResource("5_hs0dm")
-
-[sub_resource type="Gradient" id="Gradient_vh3ev"]
-colors = PackedColorArray(1, 0.192157, 0.192157, 1, 0.156863, 0.156863, 0.168627, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_p6gyi"]
-gradient = SubResource("Gradient_vh3ev")
-fill_from = Vector2(0.5, 0)
-fill_to = Vector2(0.5, 1)
-metadata/_snap_enabled = true
-
-[sub_resource type="Animation" id="Animation_onnjv"]
-resource_name = "IntroAnim"
+[sub_resource type="Animation" id="Animation_nmj8f"]
+resource_name = "introAnim"
 length = 0.533337
 step = 0.0333333
 tracks/0/type = "value"
@@ -325,7 +161,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1.5, 1),
 "update": 0,
-"values": [Vector2(805, 0), Vector2(720, 0)]
+"values": [Vector2(-85, 1280), Vector2(0, 1280)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -354,7 +190,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Partcles/RightBorderParticles:emitting")
+tracks/3/path = NodePath("../Partcles/LeftBorderParticles:emitting")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -366,7 +202,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Partcles/RightBorderParticles:one_shot")
+tracks/4/path = NodePath("../Partcles/LeftBorderParticles:one_shot")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -375,9 +211,86 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.156863, 0.156863, 0.168627, 1)]
+}
 
-[sub_resource type="Animation" id="Animation_x8rq4"]
-resource_name = "PlayerReadyState"
+[sub_resource type="Animation" id="Animation_jsgxu"]
+resource_name = "removeReadyStateAnim"
+length = 0.300003
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:self_modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.133333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.156863, 0.156863, 0.168627, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Texture/Container/Margin/Text/Gradient:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Partcles/LeftBorderParticles:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_k8tv4"]
+resource_name = "setReadyStateAnim"
 length = 0.233337
 step = 0.0333333
 tracks/0/type = "value"
@@ -402,7 +315,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 0.192157, 0.192157, 1)]
+"values": [Color(1, 1, 1, 1), Color(0.121569, 0.317647, 1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -431,7 +344,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Partcles/RightBorderParticles:one_shot")
+tracks/4/path = NodePath("../Partcles/LeftBorderParticles:one_shot")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -443,7 +356,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../Partcles/RightBorderParticles:emitting")
+tracks/5/path = NodePath("../Partcles/LeftBorderParticles:emitting")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -455,7 +368,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../Partcles/RightBorderParticles:explosiveness")
+tracks/6/path = NodePath("../Partcles/LeftBorderParticles:explosiveness")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -464,6 +377,32 @@ tracks/6/keys = {
 "update": 0,
 "values": [0.0]
 }
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vscd2"]
+_data = {
+"RESET": SubResource("Animation_cbq4q"),
+"introAnim": SubResource("Animation_nmj8f"),
+"removeReadyStateAnim": SubResource("Animation_jsgxu"),
+"setReadyStateAnim": SubResource("Animation_k8tv4")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tahe5"]
+bg_color = Color(0.156863, 0.156863, 0.168627, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v8lvh"]
+load_path = "res://.godot/imported/BorderShineTexture.png-f3b8d8955a92eaeaa0cfa3ca39393d65.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jrkd6"]
+texture = SubResource("CompressedTexture2D_v8lvh")
+
+[sub_resource type="Gradient" id="Gradient_iog5s"]
+colors = PackedColorArray(1, 0.192157, 0.192157, 1, 0.156863, 0.156863, 0.168627, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bv8c0"]
+gradient = SubResource("Gradient_iog5s")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+metadata/_snap_enabled = true
 
 [sub_resource type="Animation" id="Animation_2uitf"]
 length = 0.001
@@ -564,11 +503,243 @@ tracks/7/keys = {
 "values": [0.75]
 }
 
+[sub_resource type="Animation" id="Animation_onnjv"]
+resource_name = "introAnim"
+length = 0.533337
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1.5, 1),
+"update": 0,
+"values": [Vector2(805, 0), Vector2(720, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:self_modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.133333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Partcles/RightBorderParticles:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Partcles/RightBorderParticles:one_shot")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.156863, 0.156863, 0.168627, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gt5ru"]
+resource_name = "removeReadyStateAnim"
+length = 0.300003
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:self_modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.133333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.156863, 0.156863, 0.168627, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Texture/Container/Margin/Text/Gradient:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Partcles/RightBorderParticles:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_x8rq4"]
+resource_name = "setReadyStateAnim"
+length = 0.233337
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.192157, 0.192157, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.233333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.196078)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Texture/Container/Margin/Text/Gradient:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Partcles/RightBorderParticles:one_shot")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Partcles/RightBorderParticles:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Partcles/RightBorderParticles:explosiveness")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ftiqk"]
 _data = {
-"IntroAnim": SubResource("Animation_onnjv"),
-"PlayerReadyState": SubResource("Animation_x8rq4"),
-"RESET": SubResource("Animation_2uitf")
+"RESET": SubResource("Animation_2uitf"),
+"introAnim": SubResource("Animation_onnjv"),
+"removeReadyStateAnim": SubResource("Animation_gt5ru"),
+"setReadyStateAnim": SubResource("Animation_x8rq4")
 }
 
 [node name="SideBorderUI" type="Control"]
@@ -629,12 +800,12 @@ offset_top = 1280.0
 offset_right = 1110.04
 offset_bottom = 85.0
 rotation = -1.5708
-theme_override_styles/panel = SubResource("StyleBoxFlat_5hl4f")
+theme_override_styles/panel = SubResource("StyleBoxFlat_iful7")
 
 [node name="Texture" type="PanelContainer" parent="LeftBorderColor"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_styles/panel = ExtResource("1_jgro3")
+theme_override_styles/panel = SubResource("StyleBoxTexture_w1xaf")
 
 [node name="Container" type="HBoxContainer" parent="LeftBorderColor/Texture"]
 layout_mode = 2
@@ -660,7 +831,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_mektc")
+texture = SubResource("GradientTexture2D_6cqrd")
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="LeftBorderColor"]
 libraries = {
@@ -678,12 +849,12 @@ offset_left = 169.96
 offset_right = 1365.0
 offset_bottom = -1195.0
 rotation = 1.5708
-theme_override_styles/panel = SubResource("StyleBoxFlat_y4gc5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_tahe5")
 
 [node name="Texture" type="PanelContainer" parent="RightBorderColor"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_t6jaq")
+theme_override_styles/panel = SubResource("StyleBoxTexture_jrkd6")
 
 [node name="Container" type="HBoxContainer" parent="RightBorderColor/Texture"]
 layout_mode = 2
@@ -709,7 +880,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_p6gyi")
+texture = SubResource("GradientTexture2D_bv8c0")
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="RightBorderColor"]
 libraries = {
