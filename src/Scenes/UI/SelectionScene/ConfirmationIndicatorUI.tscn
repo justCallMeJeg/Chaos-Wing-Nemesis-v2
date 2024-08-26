@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://djemxmckx0cl4"]
+
+[ext_resource type="Texture2D" uid="uid://vab75l68dmq3" path="res://src/Assets/UI/Texture/BGShineTexture.png" id="1_lg5f1"]
+[ext_resource type="Script" path="res://src/Scripts/Scenes/UI/ConfirmationIndicatorUI.gd" id="1_qb4ef"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ylxa3"]
+texture = ExtResource("1_lg5f1")
+
+[sub_resource type="Gradient" id="Gradient_upjnp"]
+colors = PackedColorArray(1, 1, 1, 1, 0.156863, 0.156863, 0.168627, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_juocb"]
+gradient = SubResource("Gradient_upjnp")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g185a"]
+texture = ExtResource("1_lg5f1")
+
+[sub_resource type="Gradient" id="Gradient_h0l6q"]
+colors = PackedColorArray(1, 1, 1, 1, 0.156863, 0.156863, 0.168627, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n102a"]
+gradient = SubResource("Gradient_h0l6q")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+metadata/_snap_enabled = true
+
+[node name="ConfirmationIndicatorUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qb4ef")
+
+[node name="TopIndicator" type="PanelContainer" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.392157)
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.118056
+anchor_right = 0.881944
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ylxa3")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="TopIndicator"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_juocb")
+
+[node name="BottomIndicator" type="PanelContainer" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.392157)
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.118056
+anchor_top = 0.5
+anchor_right = 0.882
+anchor_bottom = 1.0
+offset_left = 550.0
+offset_top = 640.0
+offset_right = 549.96
+offset_bottom = 640.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 3.14159
+theme_override_styles/panel = SubResource("StyleBoxTexture_g185a")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="BottomIndicator"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_n102a")
