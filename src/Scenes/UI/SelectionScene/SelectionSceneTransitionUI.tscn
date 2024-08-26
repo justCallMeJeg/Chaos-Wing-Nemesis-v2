@@ -1,0 +1,542 @@
+[gd_scene load_steps=18 format=3 uid="uid://cfco0lc61jiex"]
+
+[ext_resource type="Script" path="res://src/Scripts/Scenes/UI/SelectionSceneTransitionUI.gd" id="1_fa82h"]
+[ext_resource type="Texture2D" uid="uid://blq5fskg0vctx" path="res://src/Assets/UI/Texture/BorderShineTexture.png" id="1_k2ime"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmv8p"]
+bg_color = Color(0.121569, 0.317647, 1, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6hyob"]
+load_path = "res://.godot/imported/BorderShineTexture.png-f3b8d8955a92eaeaa0cfa3ca39393d65.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1b4it"]
+texture = SubResource("CompressedTexture2D_6hyob")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6jjt"]
+bg_color = Color(1, 0.192157, 0.192157, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_koslq"]
+load_path = "res://.godot/imported/BorderShineTexture.png-f3b8d8955a92eaeaa0cfa3ca39393d65.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ppx5x"]
+texture = SubResource("CompressedTexture2D_koslq")
+
+[sub_resource type="Gradient" id="Gradient_c65xx"]
+offsets = PackedFloat32Array(0.474359)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tjqq7"]
+gradient = SubResource("Gradient_c65xx")
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_i3fci"]
+_data = [Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_67krs"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_ruyc2"]
+offsets = PackedFloat32Array(0.474359)
+colors = PackedColorArray(0, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b85os"]
+gradient = SubResource("Gradient_ruyc2")
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_iu5jx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/LeftBorderColor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(275, 1280)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/LeftBorderColor:theme_override_styles/panel:bg_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7.45058e-09),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.121569, 0.317647, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/RightBorderColor:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(445, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/RightBorderColor:theme_override_styles/panel:bg_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7.45058e-09),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.192157, 0.192157, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/LeftBorderColor/LeftBorderTexture:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.392157)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control/RightBorderColor/RightBorderTexture:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.392157)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LeftBG:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(360, 1280)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("RightBG:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(360, 1280)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RightBG:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(360, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("LeftBG:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("RightBG:color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b3xya"]
+resource_name = "sceneSlamTransition"
+length = 0.46667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/LeftBorderColor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(275, 1280), Vector2(275, 1280), Vector2(-85, 1280)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/LeftBorderColor:theme_override_styles/panel:bg_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7.45058e-09, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.121569, 0.317647, 1, 1), Color(0.121569, 0.317647, 1, 1), Color(0.156863, 0.156863, 0.168627, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/RightBorderColor:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(445, 0), Vector2(445, 0), Vector2(805, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/RightBorderColor:theme_override_styles/panel:bg_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7.45058e-09, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.192157, 0.192157, 1), Color(1, 0.192157, 0.192157, 1), Color(0.156863, 0.156863, 0.168627, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/LeftBorderColor/LeftBorderTexture:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.0980392)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control/RightBorderColor/RightBorderTexture:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.0980392)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LeftBG:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(360, 1280), Vector2(360, 1280), Vector2(0, 1280)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("RightBG:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(360, 1280), Vector2(360, 1280), Vector2(0, 1280)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RightBG:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(360, 0), Vector2(360, 0), Vector2(720, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("LeftBG:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.156863, 0.156863, 0.168627, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("RightBG:color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.156863, 0.156863, 0.168627, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2D/RightBorderParticles:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2D/LeftBorderParticles:emitting")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2D/RightGhostParticles:emitting")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2D/LeftGhostParticles:emitting")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.333333, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.239216)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3tb6l"]
+_data = {
+"RESET": SubResource("Animation_iu5jx"),
+"sceneSlamTransition": SubResource("Animation_b3xya")
+}
+
+[node name="SelectionSceneTransitionUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fa82h")
+
+[node name="LeftBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RightBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftBorderColor" type="PanelContainer" parent="Control"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 275.0
+offset_top = 1280.0
+offset_right = 1555.0
+offset_bottom = 85.0
+grow_vertical = 2
+rotation = -1.5708
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmv8p")
+
+[node name="LeftBorderTexture" type="PanelContainer" parent="Control/LeftBorderColor"]
+self_modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1b4it")
+
+[node name="RightBorderColor" type="PanelContainer" parent="Control"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 445.0
+offset_right = 1725.0
+offset_bottom = -1195.0
+grow_vertical = 2
+rotation = 1.5708
+theme_override_styles/panel = SubResource("StyleBoxFlat_h6jjt")
+
+[node name="RightBorderTexture" type="PanelContainer" parent="Control/RightBorderColor"]
+self_modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ppx5x")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="RightBorderParticles" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(402, 640)
+scale = Vector2(1, 640)
+emitting = false
+amount = 25
+lifetime = 0.75
+one_shot = true
+speed_scale = 1.5
+explosiveness = 0.75
+texture = SubResource("GradientTexture2D_tjqq7")
+emission_shape = 3
+emission_rect_extents = Vector2(18, 1)
+gravity = Vector2(3000, 0)
+scale_amount_curve = SubResource("Curve_i3fci")
+color_ramp = SubResource("Gradient_67krs")
+
+[node name="LeftBorderParticles" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(318, 640)
+scale = Vector2(1, 640)
+emitting = false
+amount = 25
+lifetime = 0.75
+one_shot = true
+speed_scale = 1.5
+explosiveness = 0.75
+texture = SubResource("GradientTexture2D_b85os")
+emission_shape = 3
+emission_rect_extents = Vector2(18, 1)
+gravity = Vector2(-3000, 0)
+scale_amount_curve = SubResource("Curve_i3fci")
+color_ramp = SubResource("Gradient_67krs")
+
+[node name="RightGhostParticles" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(402, 640)
+emitting = false
+amount = 3
+one_shot = true
+speed_scale = 3.5
+explosiveness = 0.5
+texture = ExtResource("1_k2ime")
+gravity = Vector2(3000, 0)
+angle_min = -90.0
+angle_max = -90.0
+color_ramp = SubResource("Gradient_67krs")
+
+[node name="LeftGhostParticles" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(318, 640)
+emitting = false
+amount = 3
+one_shot = true
+speed_scale = 3.5
+explosiveness = 0.5
+texture = ExtResource("1_k2ime")
+gravity = Vector2(-3000, 0)
+angle_min = 90.0
+angle_max = 90.0
+color_ramp = SubResource("Gradient_67krs")
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3tb6l")
+}
