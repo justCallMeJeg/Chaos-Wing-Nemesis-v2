@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://t0plcqtux4aj"]
+[gd_scene load_steps=26 format=3 uid="uid://t0plcqtux4aj"]
 
 [ext_resource type="Script" path="res://src/Scripts/Scenes/UI/TextTextureUI.gd" id="1_c7a4w"]
 [ext_resource type="FontFile" uid="uid://cqb5dwh0v5xxr" path="res://src/Assets/UI/PublicPixel (MainFont).ttf" id="1_dqnbq"]
@@ -13,6 +13,7 @@ shadow_offset = Vector2(0, 0)
 
 [sub_resource type="Gradient" id="Gradient_mb88m"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+metadata/_snap_enabled = true
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_lcsph"]
 gradient = SubResource("Gradient_mb88m")
@@ -38,25 +39,48 @@ font_color = Color(0, 0, 0, 1)
 shadow_size = 0
 shadow_offset = Vector2(0, 0)
 
-[sub_resource type="Gradient" id="Gradient_yv1a2"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_0p6ay"]
-gradient = SubResource("Gradient_yv1a2")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0, 1)
+[sub_resource type="Gradient" id="Gradient_3ndmq"]
+colors = PackedColorArray(1, 1, 1, 1, 0.156863, 0.156863, 0.168627, 1)
 metadata/_snap_enabled = true
 
-[sub_resource type="Gradient" id="Gradient_j4gjs"]
-colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 1)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l1jpg"]
+gradient = SubResource("Gradient_3ndmq")
+fill = 1
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(1, 0.7)
 metadata/_snap_enabled = true
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_04j2s"]
-gradient = SubResource("Gradient_j4gjs")
+[sub_resource type="Gradient" id="Gradient_nrpu7"]
+colors = PackedColorArray(1, 1, 1, 1, 0.156863, 0.156863, 0.168627, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mpowm"]
+gradient = SubResource("Gradient_nrpu7")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0, 1)
+fill_to = Vector2(1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_6i54r"]
+colors = PackedColorArray(0.156863, 0.156863, 0.168627, 1, 1, 1, 1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0xtfn"]
+gradient = SubResource("Gradient_6i54r")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_se0nv"]
+colors = PackedColorArray(1, 1, 1, 1, 0.156863, 0.156863, 0.168627, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fhy3c"]
+gradient = SubResource("Gradient_se0nv")
+fill = 1
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(1, 0.3)
 metadata/_snap_enabled = true
 
 [sub_resource type="LabelSettings" id="LabelSettings_3qrgf"]
@@ -69,6 +93,7 @@ shadow_offset = Vector2(0, 0)
 
 [sub_resource type="Gradient" id="Gradient_7u82e"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+metadata/_snap_enabled = true
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_6x73m"]
 gradient = SubResource("Gradient_7u82e")
@@ -93,79 +118,79 @@ length = 0.56667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CenterTextContainer/MiddleText:modulate")
-tracks/0/interp = 1
+tracks/0/path = NodePath("LowerText:position")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(2.98023e-08, 0.233333, 0.566667),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.0333333, 0.233333),
+"transitions": PackedFloat32Array(1.5, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.588235)]
+"values": [Vector2(0, 1280), Vector2(0, 1024)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("LowerTextContainer:position")
+tracks/1/path = NodePath("UpperText:position")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0.0333333, 0.233333),
 "transitions": PackedFloat32Array(1.5, 1),
 "update": 0,
-"values": [Vector2(0, 1280), Vector2(0, 1024)]
+"values": [Vector2(0, -256), Vector2(0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("UpperTextContainer:position")
-tracks/2/interp = 2
+tracks/2/path = NodePath("UpperText/UpperText/ShineGradient:position")
+tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.0333333, 0.233333),
-"transitions": PackedFloat32Array(1.5, 1),
+"times": PackedFloat32Array(0.0333333, 0.566667),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -256), Vector2(0, 0)]
+"values": [Vector2(0, -256), Vector2(0, 512)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("UpperTextContainer/UpperText/ShineGradient:position")
+tracks/3/path = NodePath("LowerText/LowerText/ShineGradient:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0.0333333, 0.566667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -256), Vector2(0, 256)]
+"values": [Vector2(0, 512), Vector2(0, -256)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("LowerTextContainer/LowerText/ShineGradient:position")
+tracks/4/path = NodePath("UpperText:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.0333333, 0.566667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 256), Vector2(0, -256)]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("CenterTextContainer/MiddleText/ShineGradient:self_modulate")
+tracks/5/path = NodePath("CenterText:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.1, 0.566667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("UpperTextContainer:visible")
+tracks/6/path = NodePath("LowerText:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -177,26 +202,134 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("CenterTextContainer:visible")
+tracks/7/path = NodePath("CenterText:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"times": PackedFloat32Array(0.2, 0.233333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 1.05), Vector2(1, 1)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("LowerTextContainer:visible")
+tracks/8/path = NodePath("CenterText/MiddleText:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.233333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.784314)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CenterText/MiddleText/TextGradient:texture:gradient:offsets")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedFloat32Array(0, 0.1), PackedFloat32Array(0, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CenterText/MiddleText/ShineGradient:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true]
+"values": [false, true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CenterText/MiddleText/ShineGradient:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.233333, 0.566667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CenterText/UpperMiddleText:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(720, 0), Vector2(0, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CenterText/LowerMiddleText:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1408, 256), Vector2(-680, 256)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CenterText/UpperMiddleText:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.392157)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CenterText/LowerMiddleText:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.392157)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CenterText/UpperMiddleText/TextGradient:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CenterText/LowerMiddleText/TextGradient:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_qcmgq"]
@@ -204,43 +337,43 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CenterTextContainer/MiddleText:modulate")
+tracks/0/path = NodePath("LowerText:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(0, 1280)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("LowerTextContainer:position")
+tracks/1/path = NodePath("UpperText:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 1280)]
+"values": [Vector2(0, -256)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("UpperTextContainer:position")
+tracks/2/path = NodePath("UpperText/UpperText/ShineGradient:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -256)]
+"values": [Vector2(0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("UpperTextContainer/UpperText/ShineGradient:position")
+tracks/3/path = NodePath("LowerText/LowerText/ShineGradient:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -252,31 +385,31 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("LowerTextContainer/LowerText/ShineGradient:position")
+tracks/4/path = NodePath("UpperText:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
+"update": 1,
+"values": [false]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("CenterTextContainer/MiddleText/ShineGradient:self_modulate")
+tracks/5/path = NodePath("CenterText:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [false]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("UpperTextContainer:visible")
+tracks/6/path = NodePath("LowerText:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -288,32 +421,315 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("CenterTextContainer:visible")
+tracks/7/path = NodePath("UpperText/UpperText:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(0, -256)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("LowerTextContainer:visible")
+tracks/8/path = NodePath("LowerText/LowerText:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("UpperText/UpperText/TextGrdient:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 256)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("LowerText/LowerText/TextGradient:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CenterText:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CenterText/MiddleText:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CenterText/MiddleText/TextGradient:texture:gradient:offsets")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedFloat32Array(0, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CenterText/MiddleText/ShineGradient:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CenterText/MiddleText/ShineGradient:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CenterText/UpperMiddleText:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CenterText/LowerMiddleText:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-688, 256)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CenterText/UpperMiddleText/TextGradient:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("CenterText/LowerMiddleText/TextGradient:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(680, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("CenterText/UpperMiddleText:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("CenterText/LowerMiddleText:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("CenterText/UpperMiddleText/TextGradient:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("CenterText/LowerMiddleText/TextGradient:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_a1xjg"]
+resource_name = "idleScroll"
+length = 5.00001
+loop_mode = 1
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UpperText/UpperText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -256), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LowerText/LowerText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -256)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UpperText/UpperText/TextGrdient:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 256), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LowerText/LowerText/TextGradient:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 256)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CenterText/UpperMiddleText:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-640, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CenterText/LowerMiddleText:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-680, 256), Vector2(-42, 256)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CenterText/UpperMiddleText/TextGradient:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(640, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CenterText/LowerMiddleText/TextGradient:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(680, 0), Vector2(42, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ruhpo"]
 _data = {
 "IntroAnim": SubResource("Animation_wqcxg"),
-"RESET": SubResource("Animation_qcmgq")
+"RESET": SubResource("Animation_qcmgq"),
+"idleScroll": SubResource("Animation_a1xjg")
 }
 
 [node name="TextTextureUI" type="Control"]
@@ -325,140 +741,221 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c7a4w")
 
-[node name="UpperTextContainer" type="HBoxContainer" parent="."]
+[node name="UpperText" type="Control" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0.784314)
+clip_contents = true
 layout_mode = 1
-anchors_preset = 10
 anchor_right = 1.0
+anchor_bottom = 0.2
+offset_top = -256.0
+offset_bottom = -256.0
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="UpperText" type="Label" parent="UpperText"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_top = -256.0
 grow_horizontal = 2
-alignment = 1
-
-[node name="UpperText" type="Label" parent="UpperTextContainer"]
-clip_children = 2
-layout_mode = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "PLACEHOLDER
+PLACEHOLDER
+PLACEHOLDER
+PLACEHOLDER
+PLACEHOLDER
 PLACEHOLDER
 PLACEHOLDER
 PLACEHOLDER"
 label_settings = SubResource("LabelSettings_jpn5w")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="TextGrdient" type="TextureRect" parent="UpperTextContainer/UpperText"]
+[node name="TextGrdient" type="TextureRect" parent="UpperText/UpperText"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 256.0
+offset_bottom = -0.000305176
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_lcsph")
 
-[node name="ShineGradient" type="TextureRect" parent="UpperTextContainer/UpperText"]
+[node name="ShineGradient" type="TextureRect" parent="UpperText/UpperText"]
 self_modulate = Color(1, 1, 1, 0.392157)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -256.0
 offset_bottom = -256.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_ogfbg")
 
-[node name="CenterTextContainer" type="HBoxContainer" parent="."]
+[node name="CenterText" type="Control" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0.784314)
+clip_contents = true
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchor_top = 0.375
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -128.0
-offset_bottom = 128.0
+anchor_bottom = 0.625
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
+pivot_offset = Vector2(360, 160)
+metadata/_edit_use_anchors_ = true
 
-[node name="MiddleText" type="Label" parent="CenterTextContainer"]
+[node name="UpperMiddleText" type="Label" parent="CenterText"]
 clip_children = 2
 layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 0.2
+offset_right = 688.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "VSVSVSVSVS
-VSVSVSVSVS
-VSVSVSVSVS
-VSVSVSVSVS
-VSVSVSVSVS"
+text = "VSVSVSVSVSVSVSVSVSVSVS"
 label_settings = SubResource("LabelSettings_tlihg")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="TextGradient" type="TextureRect" parent="CenterTextContainer/MiddleText"]
-self_modulate = Color(1, 1, 1, 0.784314)
+[node name="TextGradient" type="TextureRect" parent="CenterText/UpperMiddleText"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -688.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_l1jpg")
+
+[node name="MiddleText" type="Label" parent="CenterText"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00555556
+anchor_top = 0.2
+anchor_right = 1.00556
+anchor_bottom = 0.8
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "VSVSVSVSVSV
+VSVSVSVSVSV
+VSVSVSVSVSV"
+label_settings = SubResource("LabelSettings_tlihg")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TextGradient" type="TextureRect" parent="CenterText/MiddleText"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_0p6ay")
+texture = SubResource("GradientTexture2D_mpowm")
 
-[node name="ShineGradient" type="TextureRect" parent="CenterTextContainer/MiddleText"]
+[node name="ShineGradient" type="TextureRect" parent="CenterText/MiddleText"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_04j2s")
+texture = SubResource("GradientTexture2D_0xtfn")
 
-[node name="LowerTextContainer" type="HBoxContainer" parent="."]
+[node name="LowerMiddleText" type="Label" parent="CenterText"]
+clip_children = 2
+layout_mode = 2
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -688.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "VSVSVSVSVSVSVSVSVSVSVS"
+label_settings = SubResource("LabelSettings_tlihg")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextGradient" type="TextureRect" parent="CenterText/LowerMiddleText"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 680.0
+offset_right = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_fhy3c")
+
+[node name="LowerText" type="Control" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0.784314)
+clip_contents = true
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 256.0
 offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 0
-alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="LowerText" type="Label" parent="LowerTextContainer"]
+[node name="LowerText" type="Label" parent="LowerText"]
 clip_children = 2
 layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 256.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "PLACEHOLDER
+PLACEHOLDER
+PLACEHOLDER
+PLACEHOLDER
+PLACEHOLDER
 PLACEHOLDER
 PLACEHOLDER
 PLACEHOLDER"
 label_settings = SubResource("LabelSettings_3qrgf")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="TextGradient" type="TextureRect" parent="LowerTextContainer/LowerText"]
+[node name="TextGradient" type="TextureRect" parent="LowerText/LowerText"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -256.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_6x73m")
 
-[node name="ShineGradient" type="TextureRect" parent="LowerTextContainer/LowerText"]
+[node name="ShineGradient" type="TextureRect" parent="LowerText/LowerText"]
 self_modulate = Color(1, 1, 1, 0.392157)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 256.0
-offset_bottom = 256.0
+offset_bottom = -256.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_x3vef")
