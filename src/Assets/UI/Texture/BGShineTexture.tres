@@ -1,6 +1,0 @@
-[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cope74gtkx7e7"]
-
-[ext_resource type="Texture2D" uid="uid://blq5fskg0vctx" path="res://src/Assets/UI/Texture/BorderShineTexture.png" id="1_d13vb"]
-
-[resource]
-texture = ExtResource("1_d13vb")
