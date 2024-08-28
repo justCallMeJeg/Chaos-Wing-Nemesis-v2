@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bukc3tjmqhra0"]
+[gd_scene load_steps=10 format=3 uid="uid://bukc3tjmqhra0"]
 
 [ext_resource type="PackedScene" uid="uid://t0plcqtux4aj" path="res://src/Scenes/UI/SelectionScene/TextTextureUI.tscn" id="1_7mdxs"]
 [ext_resource type="Script" path="res://src/Scripts/Scenes/GameShipSelection.gd" id="1_hjctn"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cfp6585xx6raj" path="res://src/Scenes/UI/SelectionScene/SideTooltipUI.tscn" id="3_ho6mp"]
 [ext_resource type="PackedScene" uid="uid://bssxlii1nubs6" path="res://src/Scenes/UI/SelectionScene/MainTextUI.tscn" id="4_5iht1"]
 [ext_resource type="PackedScene" uid="uid://cwi6ryoyw8m6b" path="res://src/Scenes/UI/SelectionScene/TimerUI.tscn" id="5_4fpfk"]
+[ext_resource type="PackedScene" uid="uid://cfco0lc61jiex" path="res://src/Scenes/UI/SelectionScene/SelectionSceneTransitionUI.tscn" id="7_txmax"]
 
 [sub_resource type="Animation" id="Animation_dqcbs"]
 resource_name = "IntroAnim"
@@ -118,6 +119,9 @@ layout_mode = 1
 Countdown = 60
 
 [node name="MainTextUI" parent="." instance=ExtResource("4_5iht1")]
+layout_mode = 1
+
+[node name="SelectionSceneTransitionUI" parent="." instance=ExtResource("7_txmax")]
 layout_mode = 1
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="."]
