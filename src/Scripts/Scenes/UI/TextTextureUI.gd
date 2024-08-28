@@ -58,9 +58,5 @@ func sceneTextTextureHandler() -> void:
 			setText(tooltipText.SideSelection.UpperText, GameManager.PlayableSides.TOP)
 			setText(tooltipText.SideSelection.LowerText, GameManager.PlayableSides.BOTTOM)
 	elif GameManager.currentGameState == GameManager.GameStates.ShipSelection:
-		if GameManager.currentP1Side == GameManager.PlayableSides.TOP:
-			setText(tooltipText.ShipSelection.P1Text, GameManager.PlayableSides.TOP)
-			setText(tooltipText.ShipSelection.P2Text, GameManager.PlayableSides.BOTTOM)
-		elif GameManager.currentP1Side == GameManager.PlayableSides.BOTTOM:
-			setText(tooltipText.ShipSelection.P2Text, GameManager.PlayableSides.TOP)
-			setText(tooltipText.ShipSelection.P1Text, GameManager.PlayableSides.BOTTOM)
+		setText(tooltipText.ShipSelection.P1Text, GameManager.currentP1Side)
+		setText(tooltipText.ShipSelection.P2Text, GameManager.currentP2Side)
