@@ -10,6 +10,8 @@ const DEFAULT_POSITION = 620
 const TOP_POSITION = 265
 const BOTTOM_POSITION = 965
 
+signal animFinished(anim: StringName)
+
 func playIntroAnim() -> void:
 	animPlayer.play("IntroAnim")
 
@@ -63,3 +65,9 @@ func setTimeoutStatus(player: GameManager.Player, disabled: bool) -> void:
 		InputManager.P1InputsDisabled = disabled
 	elif player == GameManager.Player.P2		:
 		InputManager.P2InputsDisabled = disabled
+
+func playReadyAnim() -> void:
+	animPlayer.play("stageTransitionAnim")
+	await animPlayer.animation_finished
+	animFinished.emit("stageTransitionAnim")
+	
