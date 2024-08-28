@@ -132,3 +132,5 @@ layout_mode = 1
 libraries = {
 "": SubResource("AnimationLibrary_agrhu")
 }
+
+[connection signal="animFinished" from="SideSelectionIndicatorUI" to="." method="stageTransitionAnimFinished"]

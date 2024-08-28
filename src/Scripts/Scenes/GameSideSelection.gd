@@ -13,7 +13,6 @@ var UIText =  UIUtil.Text["SelectionScene"].SideTooltipUI.SideSelection
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	GameManager.currentGameState = GameManager.GameStates.SideSelection
 	InputManager.InputsDisabled = true # Temp disable input till intro finished
 	print("[DEBUG]: GameSideSelection scene ready...")
 	InputManager.inputHandler.connect(inputHandler) # Connects InputManager to inputHandler
@@ -80,6 +79,9 @@ func setReadyState(player: GameManager.Player):
 	textTextureHandler.sceneTextTextureHandler() # Text Texture State Handler
 	textTextureHandler.playShineAnim(playerPos) # Plays player side text texture shine anim
 	sideTooltipHandler.sceneTooltipHandler() # Tooltip State Handler
+	
+	if GameManager.P1Selected and GameManager.P2Selected:
+		sideSelectionIndicatorHandler.playReadyAnim()
 
 # Confirmation State Remover; Removes current player's state to selecting
 func removeReadyState(player: GameManager.Player, playerPos: GameManager.PlayableSides) -> void:
@@ -91,3 +93,8 @@ func removeReadyState(player: GameManager.Player, playerPos: GameManager.Playabl
 	confirmationIndicatorHandler.removeReadyIndicator(playerPos) # Removes player confirmation indicator
 	textTextureHandler.sceneTextTextureHandler() # Text Texture State Handler
 	sideTooltipHandler.sceneTooltipHandler() # Tooltip State Handler
+
+func stageTransitionAnimFinished(anim):
+	if anim == "stageTransitionAnim":
+		GameManager.currentGameState = GameManager.GameStates.ShipSelection
+		get_tree().change_scene_to_file("res://src/Scenes/GameStates/GameShipSelection.tscn")
